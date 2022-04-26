@@ -21,6 +21,10 @@
                     }
                 }
                 
+                .container {
+                    width: 85%;
+                }
+                
                 .btn {
                     width: 160px;
                     height: 50px;
@@ -63,7 +67,7 @@
                 a {
                     text-decoration: none;
                     color: var(--fontColor);
-                    transition: all ease-in .4s;
+                    transition: all ease .74s;
                 }
                 
                 a:hover {
@@ -168,11 +172,15 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    width: 70%;
+                    width: 55%;
                 }
                 
                 .nav .listItems .item {
                     margin: 0 10px;
+                }
+                
+                .nav .listItems .item a {
+                    display: block;
                 }
                 
                 .nav .account {
@@ -204,8 +212,8 @@
                 }
                 
                 .bannerContainer {
-                    width: 80%;
-                    height: 90%;
+                    width: 85%;
+                    height: 100%;
                     display: flex;
                     justify-content: space-between;
                 }
@@ -216,9 +224,12 @@
                 }
                 
                 .bannerContainer .left {
-                    width: 50%;
-                    display: flex;
-                    justify-content: space-between;
+                    width: 45%;
+                    height: 100%;
+                    background: url(../img/118-1188735_download-student-girl.png) no-repeat top left;
+                    background-size: cover;
+                    transform: scaleX(-1);
+                    z-index: 100000;
                 }
                 
                 .bannerContainer .right {
@@ -266,6 +277,9 @@
                 /* ------banner responsive------ */
                 
                 @media screen and (max-width: 1200px) {
+                    .nav .listItems {
+                        width: 60%;
+                    }
                     .bannerContainer .right .textContainer h1 {
                         font-size: 28px;
                     }
@@ -276,27 +290,30 @@
                 }
                 
                 @media screen and (max-width: 990px) {
+                    .nav .listItems {
+                        width: 70%;
+                    }
                     .nav .listItems .item {
                         margin: 0 5px;
                     }
                     .nav .listItems .item a {
                         font-size: .9em;
                     }
+                    .banner {
+                        justify-content: left;
+                    }
+                    .bannerContainer {
+                        width: 95%;
+                    }
                     .bannerContainer .right {
-                        width: 60%;
+                        width: 50%;
                     }
                     .bannerContainer .left {
-                        width: 40%;
+                        width: 50%;
                         justify-content: left;
                     }
                     .bannerContainer .right .textContainer h1 {
                         font-size: 26px;
-                    }
-                    .bannerContainer .left .imagecontainer {
-                        width: 70%;
-                    }
-                    .bannerContainer .left .imagecontainer.image1 {
-                        display: none;
                     }
                 }
                 
@@ -333,17 +350,18 @@
                     .bannerContainer .right .textContainer h1 {
                         font-size: 22px;
                     }
-                    .bannerContainer {
-                        width: 85%;
-                    }
                 }
                 
                 @media screen and (max-width: 640px) {
                     .nav .listItems {
                         width: 50%;
                     }
+                    .banner {
+                        justify-content: center;
+                    }
                     .bannerContainer {
                         justify-content: center;
+                        width: 85%;
                     }
                     .bannerContainer .left {
                         display: none;
@@ -360,14 +378,11 @@
                 
                 .benefits {
                     width: 100%;
-                    height: 300px;
+                    min-height: 300px;
                     background-color: #a5bfdd1a;
                     display: flex;
                     justify-content: center;
-                }
-                
-                .container {
-                    width: 80%;
+                    padding: 25px 0;
                 }
                 
                 .benefits .container {
@@ -376,7 +391,7 @@
                 }
                 
                 .benefits .benefitText {
-                    width: 40%;
+                    width: 34%;
                     display: flex;
                     flex-direction: column;
                     align-items: initial;
@@ -388,15 +403,23 @@
                 }
                 
                 .benefitBoxes {
-                    width: 55%;
+                    width: 60%;
                     display: flex;
+                    flex-wrap: wrap;
                     justify-content: space-around;
                     align-items: center;
                 }
                 
                 .benefitBoxes .box {
                     width: 30%;
-                    height: 90px;
+                    height: 75%;
+                    box-shadow: 0px 5px 13px -7px #979797;
+                    -webkit-box-shadow: 0px 5px 13px -7px #979797;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    border-radius: 5px;
+                    padding-top: 10px;
                 }
                 
                 .box .content {
@@ -436,15 +459,24 @@
                     width: 60%;
                 }
                 
+                .benefitBoxes .box .text {
+                    height: 60%;
+                    width: 80%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                }
+                
                 @media screen and (max-width: 990px) {
                     .benefits .container {
                         width: 90%;
                     }
                     .benefits .benefitText {
-                        width: 45%;
+                        width: 30%;
                     }
                     .benefitBoxes {
-                        width: 55%;
+                        width: 65%;
                     }
                     .benefits .benefitText h2 {
                         font-size: 1.4em;
@@ -460,6 +492,12 @@
                 }
                 
                 @media screen and (max-width: 768px) {
+                    .benefits .container {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    }
                     .benefits .benefitText h2 {
                         font-size: 1.2em;
                     }
@@ -470,10 +508,14 @@
                         font-size: .8em;
                     }
                     .benefits .benefitText {
-                        width: 40%;
+                        width: 100%;
+                        align-items: center;
                     }
                     .benefitBoxes {
-                        width: 60%;
+                        width: 100%;
+                    }
+                    .benefitBoxes .box {
+                        height: 180px;
                     }
                 }
                 
@@ -491,7 +533,10 @@
                     .benefits .benefitText h2 {
                         margin-bottom: 30px;
                     }
-                    .benefitBoxes {
+                }
+                
+                @media screen and (max-width: 540px) {
+                    .benefitBoxes .box {
                         width: 80%;
                     }
                 }
@@ -574,11 +619,18 @@
                 .swiper-slide .box .image {
                     width: 90%;
                     height: 45%;
+                    position: relative;
                 }
                 
-                .swiper-slide .box .details {
-                    width: 95%;
-                    height: 50%;
+                .swiper-slide .box .image::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    background: #2e89ba4d;
+                    z-index: 1;
+                    width: 100%;
+                    height: 100%;
                 }
                 
                 .boxcontainer .box {
@@ -605,21 +657,32 @@
                     border-radius: 5px;
                 }
                 
-                .swiper-slide .boxcontainer .box .title h4 {
+                .swiper-slide .boxcontainer .box .title {
+                    position: absolute;
+                    top: 5px;
+                    right: 5px;
+                    z-index: 10;
+                }
+                
+                .swiper-slide .boxcontainer .box .title h5 {
                     color: var(--brandColor);
-                    background-color: #a5bfdd52;
+                    background-color: var(--lightColor);
                     width: fit-content;
                     padding: 5px 15px;
                     border-radius: 5px;
                     font-weight: 400;
                 }
                 
-                .swiper-slide .boxcontainer .box .details>div {
-                    margin-bottom: 6px;
+                .swiper-slide .box .details {
+                    width: 95%;
+                    height: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
                 }
                 
-                .swiper-slide .box .explanation h4 {
-                    font-weight: 400;
+                .swiper-slide .boxcontainer .box .details>div {
+                    margin-bottom: 6px;
                 }
                 
                 .swiper-slide .box .levelInfo,
@@ -630,11 +693,17 @@
                 
                 .swiper-slide .box .bottom .cost {
                     color: var(--brandColor);
+                    font-weight: bold;
                 }
                 
-                .swiper-slide .box .bottom .rate .fa {
+                .swiper-slide .box .bottom .rate .fa:not(:last-child) {
                     font-size: .8em;
+                    color: var(--primaryColor);
+                }
+                
+                .swiper-slide .box .bottom .rate .fa:last-child {
                     color: var(--lightColor);
+                    font-size: .8em;
                 }
                 /* responsive */
                 
@@ -710,7 +779,7 @@
                 }
                 
                 .feedbackSection .rightContainer>.content {
-                    width: 80%;
+                    width: 70%;
                     height: 90%;
                 }
                 
@@ -726,7 +795,7 @@
                 }
                 
                 .swiper1 .content .comment {
-                    width: 80%;
+                    width: 100%;
                 }
                 
                 .swiper-button-next1,
@@ -765,7 +834,7 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    width: 40%;
+                    width: 50%;
                 }
                 
                 .studentInfo img {
@@ -779,7 +848,7 @@
                 }
                 
                 .leftContainer .profileImage {
-                    width: 80%;
+                    width: 70%;
                     height: 80%;
                     position: relative;
                 }
@@ -797,27 +866,27 @@
                 
                 .leftContainer .profileImage .image1 {
                     border-color: var(--primaryColor);
-                    width: 100px;
-                    height: 100px;
+                    width: 80px;
+                    height: 80px;
                     top: 0;
-                    right: 0;
+                    right: 15px;
                 }
                 
                 .leftContainer .profileImage .image2 {
-                    width: 130px;
-                    height: 130px;
+                    width: 105px;
+                    height: 105px;
                     background: url(../img/5d9a9fa43a6be1eea5b362056c6b6cc2.jpg);
                     background-repeat: no-repeat;
                     background-position: left;
                     background-size: cover;
                     border-color: var(--primaryColor2);
                     top: 0;
-                    left: 0;
+                    left: 30px;
                 }
                 
                 .leftContainer .profileImage .image3 {
-                    width: 100px;
-                    height: 100px;
+                    width: 80px;
+                    height: 80px;
                     background: url(../img/shutterstock_397706665-copy-1-1080x675.jpg);
                     background-repeat: no-repeat;
                     background-position: left;
@@ -828,27 +897,27 @@
                 }
                 
                 .leftContainer .profileImage .image4 {
-                    width: 135px;
-                    height: 135px;
+                    width: 115px;
+                    height: 115px;
                     background: url(../img/118-1188735_download-student-girl.png);
                     border-color: var(--primaryColor2);
                     background-repeat: no-repeat;
                     background-position: top;
                     background-size: cover;
                     bottom: 0;
-                    right: 0;
+                    right: 15px;
                 }
                 
                 .leftContainer .profileImage .image5 {
-                    width: 100px;
-                    height: 100px;
+                    width: 90px;
+                    height: 90px;
                     background: url(../img/945f165b6c833b4aa7a1bdb95425aa37.jpg);
                     background-repeat: no-repeat;
                     background-position: top right;
                     background-size: cover;
                     border-color: var(--primaryColor3);
                     bottom: 0;
-                    left: 0;
+                    left: 30px;
                 }
                 
                 .leftContainer .profileImage .image1 img,
@@ -865,6 +934,15 @@
                 /* responsive */
                 
                 @media screen and (max-width: 1200px) {
+                    .feedbackSection .rightContainer>.content {
+                        width: 75%;
+                    }
+                    .swiper1 .content .comment {
+                        width: 100%;
+                    }
+                    .leftContainer .profileImage {
+                        width: 75%;
+                    }
                     .leftContainer .profileImage .image1 {
                         width: 80px;
                         height: 80px;
@@ -891,9 +969,6 @@
                 @media screen and (max-width: 768px) {
                     .studentInfo {
                         width: 50%;
-                    }
-                    .swiper1 .comment {
-                        width: 90%;
                     }
                 }
                 
@@ -1372,7 +1447,7 @@
                 }
                 
                 .footerInfo {
-                    width: 80%;
+                    width: 85%;
                     height: 300px;
                     box-shadow: 0px 2px 5px #ddd;
                     background-color: #fff;
